@@ -1,3 +1,5 @@
+// https://de.wikipedia.org/wiki/Closure_(Funktion)
+
 import java.util.function.*;
 
 class Closure2nd {

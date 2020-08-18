@@ -1,3 +1,5 @@
+// http://www.iqool.de/Was-ist-eine-Closure.html
+
 import java.io.*;
 
 interface Concat {

@@ -26,14 +26,14 @@ interface SwitchClient {
 
 /* of the low ''module - low module which is detailed in draft and charcteristica and is about to change all the time */ 
 class Lamp implements SwitchClient {
-	private byte state;
+	private byte state = 0x01;
 	
 	public void switchOn () {
-		this.state = 0x01 << 1;
+		this.state <<= 1;
 	}
 
 	public void switchOff () {
-		this.state = 0x01 << 2;
+		this.state >>= 1;
 	}
 }
 

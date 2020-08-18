@@ -1,4 +1,5 @@
 // https://de.wikipedia.org/wiki/Dependency-Inversion-Prinzip
+// https://de.m.wikipedia.org/wiki/Prinzipien_objektorientierten_Designs#SOLID-Prinzipien
 
 /* high ''module */ 
 class Switch {

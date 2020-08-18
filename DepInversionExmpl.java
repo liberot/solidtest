@@ -21,7 +21,7 @@ class Switch {
 	}
 }
 
-/* controls the interface */ 
+/* controls the low module via the implemented interface */ 
 interface SwitchClient {
 	public void switchOn();
 	public void switchOff();
@@ -40,13 +40,7 @@ class Lamp implements SwitchClient {
 	}
 }
 
-
-
-
-
-
 class DepInversionExmpl {
-
 	public static void main ( String[] args ) {
 		Lamp lamp = new Lamp();
 		Switch s = new Switch( lamp );

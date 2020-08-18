@@ -27,7 +27,7 @@ interface SwitchClient {
 	public void switchOff();
 }
 
-/* of the low ''module which is detailed and is about to change all the time */ 
+/* of the low ''module - low module which is detailed in draft and charcteristica and is about to change all the time */ 
 class Lamp implements SwitchClient {
 	private boolean state;
 	

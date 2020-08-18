@@ -4,20 +4,17 @@
 /* high ''module */ 
 class Switch {
 	private SwitchClient client;
-	private boolean state;	
 
 	public Switch ( SwitchClient client ) {
 		this.client = client;
 	}
 
 	public void touch () {
-		state = !state;	
-		if( state ) {
-			client.switchOn();
-		}
-		else {
-			client.switchOff();
-		}
+		client.switchOn();
+	}
+
+	public void release () {
+		client.switchOff();
 	}
 }
 
@@ -29,14 +26,14 @@ interface SwitchClient {
 
 /* of the low ''module - low module which is detailed in draft and charcteristica and is about to change all the time */ 
 class Lamp implements SwitchClient {
-	private boolean state;
+	private byte state;
 	
 	public void switchOn () {
-		this.state = true;
+		this.state = 0x01 << 1;
 	}
 
 	public void switchOff () {
-		this.state = false;
+		this.state = 0x01 << 2;
 	}
 }
 
@@ -45,17 +42,6 @@ class DepInversionExmpl {
 		Lamp lamp = new Lamp();
 		Switch s = new Switch( lamp );
 		s.touch();
-		s.touch();
-		s.touch();
-		s.touch();
-		s.touch();
-		s.touch();
-		s.touch();
-		s.touch();
-		s.touch();
-		s.touch();
-		s.touch();
-		s.touch();
-		s.touch();
+		s.release();
 	}
 }

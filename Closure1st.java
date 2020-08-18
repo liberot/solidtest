@@ -8,7 +8,7 @@ interface Say {
 	public String exec ( String str );
 };
 
-class Closure {
+class Closure1st {
 
 	public static void main( String[] args ) {
 
